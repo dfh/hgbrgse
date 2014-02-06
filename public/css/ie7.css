@@ -1,0 +1,10 @@
+/*
+ * CSS patches for IE 7.
+ */
+
+#here, #elsewhere, #contact {
+	margin-bottom: -10px;
+}
+#intro {
+	padding-bottom: 20px;
+}
