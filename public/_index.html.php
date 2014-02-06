@@ -90,7 +90,7 @@
 
 			<h3>Around the web</h3>
 			<p>
-				Connect with me on <a href="https://twitter.com/dfh99">Twitter</a>, <a href="http://www.linkedin.com/profile/view?id=149147855">LinkedIn</a>, <a href="http://www.facebook.com/dfh99">Facebook</a>, <a href="https://pinboard.in/u:dfh">Pinboard</a> &amp; <a href="http://github.com/dfh">GitHub</a>.
+				Connect with me on <a href="https://twitter.com/dfh99">Twitter</a>, <a href="http://www.linkedin.com/profile/view?id=149147855">LinkedIn</a>, <a href="http://www.facebook.com/dfh99">Facebook</a>, <a href="https://pinboard.in/u:dfh">Pinboard</a>, <a href="http://instagram.com/dhgbrg">Instagram</a>, <a href="http://github.com/dfh">GitHub</a>.
 			</p>
 		</div>
 		<!-- /what-i-do -->
@@ -108,7 +108,7 @@ require '_contact_form.html.php';
 	<div class="g g1" id="recent">
 		<div class="s1">
 		<h2 class="hilite1">Recent activity</h2>
-			<h3>Pinboard (<a href="http://feeds.pinboard.in/rss/secret:7211c054947bf77d4e50/u:dfh/" class="feed">RSS</a>)</h3>
+			<h3>Pinboard <small>(<a href="http://feeds.pinboard.in/rss/secret:7211c054947bf77d4e50/u:dfh/" class="feed">RSS</a>)</small></h3>
 
 <?php
 if ($bookmarks && is_array($bookmarks)):
@@ -134,7 +134,7 @@ endif;
 
 	<div id="footer">
 		<p>
-			<a href="http://creativecommons.org/licenses/by-sa/2.5/">Copyright</a> © 2009–<?= date('Y') ?> <a href="/">David Högberg</a> (view <a href="">source</a>)
+			<a href="http://creativecommons.org/licenses/by-sa/2.5/">Copyright</a> © 2009–<?= date('Y') ?> <a href="/">David Högberg</a> (view <a href="https://github.com/dfh/hgbrgse">source</a>)
 		</p>
 	</div>
 	<!-- /footer -->

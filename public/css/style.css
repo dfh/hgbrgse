@@ -104,6 +104,11 @@
 		margin: 15px 0 5px 0;
 		text-transform: uppercase;
 	}
+	h3 small {
+		font-weight: normal;
+		font-size: 12px;
+	}
+
 	p {
 		margin: 15px 0;
 	}
