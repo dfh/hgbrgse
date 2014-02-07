@@ -11,7 +11,6 @@ $debug = @ $_GET['d'];
 date_default_timezone_set('Europe/Stockholm');
 
 define('EMAIL_TO', 'David Högberg <david@hgbrg.se>');
-define('EMAIL_SYS', 'david.hgbrg.se <david@hgbrg.se>');
 define('CAPTCHA_ANSWER', 'achilles');
 
 $errors = array();
@@ -63,12 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ---
 
-I am %s, and time is %s.",
+I am %s, and date('c') is %s.",
 			$sender, $msg, $file, date('c'));
 
 
 		$res = mail(
-			$to,
+			EMAIL_TO,
 			sprintf('Message from %s', $name),
 			$message
 		);
