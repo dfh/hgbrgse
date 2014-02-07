@@ -4,11 +4,6 @@
 	<meta charset="utf-8" />
 	<title>David Högberg</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
-
-	<!--[if IE 7]>
-	<link rel="stylesheet" type="text/css" href="/css/ie7.css" />
-	<![endif]-->
-
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
