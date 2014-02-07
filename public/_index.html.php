@@ -129,7 +129,7 @@ endif;
 
 	<div id="footer">
 		<p>
-			<a href="http://creativecommons.org/licenses/by-sa/2.5/">Copyright</a> © 2009–<?= date('Y') ?> <a href="/">David Högberg</a> (view <a href="https://github.com/dfh/hgbrgse">source</a>)
+			<a href="http://creativecommons.org/licenses/by-sa/4.0/">Copyright</a> © 2009–<?= date('Y') ?> <a href="/">David Högberg</a> (view <a href="https://github.com/dfh/hgbrgse">source</a>)
 		</p>
 	</div>
 	<!-- /footer -->
