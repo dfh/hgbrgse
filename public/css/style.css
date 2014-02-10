@@ -177,8 +177,11 @@
 		padding: 5px;
 	}
 	textarea {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
 		padding: 5px;
-		width: 336px;
+		width: 100%;
 	}
 	input#q {
 		margin-right: 5px;
