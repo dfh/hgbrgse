@@ -3,6 +3,12 @@
 <head>
 	<meta charset="utf-8" />
 	<title>David Högberg</title>
+
+	<meta name="description" content="The virtual home of David Högberg. He does web programming, both frontend and backend, and especially likes Python, Django and Heroku." />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="keywords" content="homepage, personal, web, web developer, programming, django, python, heroku, desmo, seemytree, see my tree, filmsugen" />
+	<meta name="dc.language" content="en-US" />
+
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -36,10 +42,6 @@
 		</p>
 	</div>
 	<!-- /intro -->
-
-	<div class="hr">
-		<hr />
-	</div>
 
 	<div id="main" class="g g3">
 		<div id="current" class="s1">
@@ -106,6 +108,7 @@ require '_contact_form.html.php';
 			<h3>Pinboard <small>(<a href="http://feeds.pinboard.in/rss/secret:7211c054947bf77d4e50/u:dfh/" class="feed">RSS</a>)</small></h3>
 
 <?php
+$bookmarks = pinboard_get_recent(15);
 if ($bookmarks && is_array($bookmarks)):
 ?>
 			<ul>

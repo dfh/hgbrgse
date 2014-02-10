@@ -83,6 +83,4 @@ I am %s, and date('c') is %s.",
 	header('HTTP/1.1 ' . $status);
 }
 
-$bookmarks = pinboard_get_recent(15);
-
 require '_index.html.php';

@@ -5,7 +5,6 @@
 /**
  * general
  */
-
 	html, body, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, form, input, textarea, select, fieldset, p, table, tr, td {
 		margin: 0;
 		padding: 0;
@@ -22,7 +21,6 @@
 /**
  * frame
  */
-
 	#doc {
 		margin: 0 auto;
 		max-width: 950px;
@@ -76,7 +74,6 @@
 /** 
  * content
  */
-
 	a {
 		color: #1f7b93;
 		text-decoration: underline;
@@ -209,7 +206,7 @@
 
 	/* intro & footer */
 	#intro {
-		margin: 30px 0;
+		margin: 30px 0 50px 0;
 		padding-top: 40px;
 	}
 	#footer {
@@ -218,6 +215,11 @@
 		margin: 10px 0 20px 0;
 		padding-top: 30px;
 		text-align: right;
+	}
+	@media (max-width: 700px) {
+		#footer {
+			text-align: center;
+		}
 	}
 	#footer p {
 		margin: 0;
