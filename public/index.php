@@ -12,8 +12,14 @@ date_default_timezone_set('Europe/Stockholm');
 
 define('EMAIL_TO', 'David Högberg <david@hgbrg.se>');
 define('CAPTCHA_ANSWER', 'achilles');
+define('ERR_NAME_MISSING', 1);
+define('ERR_MSG_MISSING', 2);
+define('ERR_CAPTCHA_MISSING', 4);
+define('ERR_CAPTCHA_WRONG_ANSWER', 8);
+define('ERR_CAPTCHA_INVALID_ANSWER', 16);
+define('ERR_EMAIL_INVALID', 32);
 
-$errors = array();
+$errors = 0;
 
 // contact form request?
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -25,25 +31,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$email = @ $_POST['email'];
 
 	if (! $name) {
-		$errors['name'] = 'Please enter your name.';
+		$errors |= ERR_NAME_MISSING;
 	}
 
 	if (! $msg) {
-		$errors['msg'] = 'Please enter a message.';
+		$errors |= ERR_MSG_MISSING;
 	}
 
 	// CONTINUEHERE
 	if (! $q) {
-		$errors['q'] = 'Please answer the question.';
+		$errors |= ERR_CAPTCHA_MISSING;
 	} elseif (strtolower( $q ) == 'tortoise') {
-		$errors['q'] = 'Must be a turbo-charged tortoise!';
+		$errors |= ERR_CAPTCHA_WRONG_ANSWER;
 	} elseif (strtolower( $q ) != CAPTCHA_ANSWER) {
-		$errors['q'] = "Please answer either 'Achilles' or 'tortoise'.";
+		$errors |= ERR_CAPTCHA_INVALID_ANSWER;
 	}
 
 	if (@ $_POST['email']) {
 		if (! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
-			$errors['email'] = 'The given e-mail address seems to be invalid.';
+			$errors |= ERR_EMAIL_INVALID;
 		}
 	}
 

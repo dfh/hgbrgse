@@ -197,7 +197,7 @@
 		font-style: italic;
 		margin-bottom: 3px;
 	}
-	input.error {
+	input.error, textarea.error {
 		border-color: #c00;
 	}
 	form .msg {
