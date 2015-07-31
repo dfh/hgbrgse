@@ -1,0 +1,233 @@
+/**
+ * styles for hgbrg.se.
+ */
+
+/**
+ * general
+ */
+html, body, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, form, input, textarea, select, fieldset, p, table, tr, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #222729;
+    font: normal 13px/1.4 Helvetica,Arial;
+}
+.struct {
+    display: none;
+}
+
+
+/**
+ * frame
+ */
+#doc {
+    margin: 0 auto;
+    max-width: 950px;
+    padding-left: 10px;
+}
+
+/* grid general */
+.g {
+    clear: both;
+    max-width: 100%;
+}
+.g > div {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 10px 30px 0;
+    width: 100%;
+}
+
+/* three slots (less-less-more) */
+.g3 > div {
+    float: left;
+}
+.g3 > .s1, .g3 > .s2 {
+    width: 30%
+}
+.g3 > .s3 {
+    width: 40%;
+}
+@media (max-width: 950px) {
+    .g3 > .s1, .g3 > .s2 {
+	width: 50%
+    }
+    .g3 > .s3 {
+	width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .g3 > .s1, .g3 > .s2 {
+	width: 100%
+    }
+}
+
+/* grid content padding, basically pad everything 10 pxs */
+.s > p, .s > h3, .s > ul, .s > dl, .s > form,
+.g > div > p, .g > div > h3, .g > div > ul, .g > div > form {
+    padding: 0 10px;
+}
+
+
+/** 
+ * content
+ */
+a {
+    color: #1f7b93;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+    font-size: 100%;
+}
+h2 {
+    color: #354147;
+    font-size: 14px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding: 2px 10px 0 10px;
+}
+h3 {
+    color: #3c4739;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    text-transform: uppercase;
+}
+h3 small {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+p {
+    margin: 15px 0;
+}
+p:first-child {
+    margin-top: 0;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+h3 + p {
+    margin-top: 5px;
+}
+
+/* highlight colors */
+.hilite1 {
+    background: #dfe3de;
+}
+.hilite2 {
+    background: #fce6cb;
+}
+.hilite3 {
+    background: #fcf2c1;
+}
+
+/* feed icon */
+.feed {
+    background: transparent url('feedicon.png') no-repeat 0 0;
+    padding-left: 18px !important;
+    display: inline-block;
+}
+
+/* rulers */
+.hr {
+    width: 75%;
+    margin: 40px auto;
+    border-top: 1px solid #ecece6;
+}
+.hr1 {
+    width: 100%;
+    margin: 30px auto;
+}
+.hr hr {
+    display: none;
+}
+
+/* lists */
+ul {
+    margin-left: 20px;
+}
+li {
+    margin: 3px 0;
+}
+li .desc {
+    color: #666;
+    display: block;
+}
+
+
+/* form */
+form {
+    color: #465760;
+}
+label {
+    display: block;
+    margin-bottom: 2px;
+}
+input[type=text] {
+    padding: 5px;
+    width: 200px;
+}
+form input[type=submit] {
+    padding: 5px;
+}
+textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+}
+input#q {
+    margin-right: 5px;
+    width: 125px;
+}
+
+form .help {
+    font-size: 11px;
+}
+form span.error {
+    color: #c00;
+    display: block;
+    font-style: italic;
+    margin-bottom: 3px;
+}
+input.error, textarea.error {
+    border-color: #c00;
+}
+form .msg {
+    background: #d2ffea;
+    border: 1px solid #b4e9d1;
+    padding: 12px 12px 8px 12px;
+    margin-bottom: 20px;
+}
+
+/* intro & footer */
+#intro {
+    margin: 30px 0 50px 0;
+    padding-top: 40px;
+}
+#footer {
+    border-top: 1px solid #ecece6;
+    color: #999;
+    margin: 10px 10px 20px 0;
+    padding-top: 30px;
+    text-align: center;
+}
+#footer p {
+    margin: 0;
+}
+
+/* outdated browser message */
+#outdated-browser {
+    max-width: 500px;
+    margin: 40px auto 0 auto;
+    background-color: #fcdee4;
+    padding: 20px;
+    text-align: center;
+}

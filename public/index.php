@@ -1,12 +1,6 @@
 <?php
 
-/**
- * hgbrg.se
- */
-
-require 'lib/functions.php';
-
-$debug = @ $_GET['d'];
+require __DIR__ . '/functions.php';
 
 date_default_timezone_set('Europe/Stockholm');
 
@@ -41,14 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	// CONTINUEHERE
 	if (! $q) {
 		$errors |= ERR_CAPTCHA_MISSING;
-	} elseif (strtolower( $q ) == 'tortoise') {
+	} elseif (strtolower($q) == 'tortoise') {
 		$errors |= ERR_CAPTCHA_WRONG_ANSWER;
-	} elseif (strtolower( $q ) != CAPTCHA_ANSWER) {
+	} elseif (strtolower($q) != CAPTCHA_ANSWER) {
 		$errors |= ERR_CAPTCHA_INVALID_ANSWER;
 	}
 
 	if (@ $_POST['email']) {
-		if (! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
+		if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			$errors |= ERR_EMAIL_INVALID;
 		}
 	}

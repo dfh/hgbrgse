@@ -1,0 +1,29 @@
+#!/usr/bin/env zsh
+
+if [ "$#" -ne "1" ]; then
+    echo "Usage: $0 <target host>"
+    exit 1
+fi
+
+target=$1
+
+cd "$(dirname "$0:A")"
+
+echo "Copying files to $target..."
+echo "---"
+
+ssh $target /bin/sh <<EOF
+rm -rf /tmp/hgbrg.se
+mkdir /tmp/hgbrg.se
+EOF
+
+rsync -azv --exclude-from="rsync.exclude" . $target:/tmp/hgbrg.se/
+
+ssh $target sudo /bin/sh <<EOF
+rm -rv /var/www/hgbrg.se/*
+mv -v /tmp/hgbrg.se/* /var/www/hgbrg.se/
+chown -R www-data:www-data /var/www/hgbrg.se
+EOF
+
+echo "---"
+echo "Done."

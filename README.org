@@ -1,0 +1,11 @@
+* hgbrg.se
+
+My personal website.
+
+** Deployment
+
+- =./deploy <target host>=
+
+** License
+
+Licensed under [[https://www.gnu.org/licenses/gpl.html][GPLv3]].

@@ -1,7 +1,7 @@
 .git
 .gitignore
-deploy.sh
-deploy_exclude
+deploy
+rsync.exclude
 .DS_Store
 *.swp
 *.swo
